@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('infos', function (Blueprint $table) {
             $table->id();
             $table->string('cpf');
-            $table->string('name');
+            $table->enum('genero', ['M', 'F']);
+            $table->string('ano_nascimento');
         });
     }
 
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('infos');
     }
 };

@@ -46,7 +46,7 @@ class ArrayController extends Controller
         $arrayLength = count($arrayWithoutLastIndex);
 
         $arrayReverse = array_reverse($arrayWithoutLastIndex);
-        // dd($reducedArr);
+
         return view('test_two.index')
             ->with('arr', $this->array ?? [])
             ->with('string', $stringArr)
@@ -64,7 +64,7 @@ class ArrayController extends Controller
      * @param array $array Array to be regenerated.
      * @return array
      */
-    public function regenerateArray($arr)
+    public function regenerateArray($arr): Array
     {
         $array = $arr;
         $string = implode(",", $array);
@@ -81,7 +81,7 @@ class ArrayController extends Controller
      * @param array $array
      * @return array
      */
-    public function reduceArray($arr)
+    public function reduceArray($arr): Array
     {
         $arrayLength = count($arr) - 1;
         $reducedArray = $arr;
@@ -100,7 +100,8 @@ class ArrayController extends Controller
      * @param int $lastMaxValue Last max value.
      * @return array
      */
-    public function compare(&$reducedArray, $index, $arrayLength, $lastMaxValue) {
+    public function compare(&$reducedArray, $index, $arrayLength, $lastMaxValue)
+    {
         if($index > $arrayLength) {
             return;
         }
@@ -119,7 +120,7 @@ class ArrayController extends Controller
      * @param array $array
      * @return array
      */
-    public function deleteLastIndex($arr)
+    public function deleteLastIndex($arr): Array
     {
         $array = $arr;
         array_pop($array);

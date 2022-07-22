@@ -29,3 +29,4 @@ Route::get('/teste/2/regenerate-array', [ArrayController::class, 'regenerateArra
 Route::get('/teste/2/reduce-array', [ArrayController::class, 'reduceArray'])->name('second-test-reduce');
 
 Route::get('/teste/3', [UserController::class, 'index'])->name('third-test');
+Route::get('/teste/3/generate', [UserController::class, 'insertUsersAndInfos'])->name('third-test-generate');
