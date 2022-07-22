@@ -10,9 +10,7 @@ class CustomerController extends Controller
 {
     /**
      * Display a test page.
-     *
      * @return View
-     *
      */
     public function index(): View
     {
@@ -22,9 +20,8 @@ class CustomerController extends Controller
 
     /**
      * Create a new customer.
-     *
+     * @param Request $request Request object.
      * @return View
-     *
      */
     public function create(Request $request): View
     {
@@ -33,9 +30,8 @@ class CustomerController extends Controller
 
     /**
      * Store a new customer.
-     *
+     * @param Request $request Request object.
      * @return View
-     *
      */
     public function store(Request $request): View
     {

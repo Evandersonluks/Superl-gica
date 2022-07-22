@@ -25,4 +25,7 @@ Route::get('/teste/1/create', [CustomerController::class, 'create'])->name('firs
 Route::post('/teste/1/store', [CustomerController::class, 'store'])->name('first-test-store');
 
 Route::get('/teste/2', [ArrayController::class, 'index'])->name('second-test');
+Route::get('/teste/2/regenerate-array', [ArrayController::class, 'regenerateArray'])->name('second-test-regenerate');
+Route::get('/teste/2/reduce-array', [ArrayController::class, 'reduceArray'])->name('second-test-reduce');
+
 Route::get('/teste/3', [UserController::class, 'index'])->name('third-test');
